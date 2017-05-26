@@ -9,45 +9,43 @@
     <title></title>
   </head>
   <body>
+    
+      <div id="app">
+        <label>{{ message }}</label>
+        <label>🙂</label>
+
+
+
+          <label v-for="item in data">
+              {{ item }}
+          </label>
+
+          <input type="text" v-model="message" />
+
+
+      </div>
+
       
-      <div id="app" v-bind:title="message">
-         {{ message }}
-      </div>
+  
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            data:[1,2,3,4,5]
+           
+        }
+        
+    })
+
+    setInterval(function () {
+        console.log(app.message)
+    },5000);
 
 
-      <div id="app-2">
-          <span v-bind:title="message">
-              鼠标悬停几秒钟查看此处动态绑定的提示信息！
-          </span>
-      </div>
+</script>
 
-
-
-
-
-
-
-
-
-
-    <script type="text/javascript">
-
-          var app = new Vue({
-              el: '#app',
-              data: {
-                  message: 'Hello Vue!'
-              }
-        })
-
-        var app2 = new Vue({
-            el: '#app-2',
-            data: {
-                message: '页面加载于 ' + new Date()
-            }
-        })
-
-
-      </script>
     
   </body>
 </html>
