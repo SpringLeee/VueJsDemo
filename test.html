@@ -11,24 +11,19 @@
   <body>
     
       <div id="app">
+
         <label>{{ message }}</label>
-        <label>🙂</label>
-
-
-
+      
           <label v-for="item in data">
               {{ item }}
           </label>
 
           <input type="text" v-model="message" />
 
-
       </div>
 
-      
-  
-
 <script>
+
     var app = new Vue({
         el: '#app',
         data: {
@@ -38,11 +33,6 @@
         }
         
     })
-
-    setInterval(function () {
-        console.log(app.message)
-    },5000);
-
 
 </script>
 
