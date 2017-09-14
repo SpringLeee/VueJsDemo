@@ -10,15 +10,16 @@
   </head>
   <body >
 
-      <span>{{ text }}</span>
-      <div id="box">
-          <span>{{ message }}</span> 
-          <span>{{ text }}</span>
-          <span>{{ text }}</span>
-          <span>{{ key }}</span>
-          <span>{{ pdd }}</span>
-          <span>{{ pdd.pdd }}</span>
-      </div>
+     <div id="box">
+
+         <ul>
+             <li v-for="item in lists">
+                 <span>{{ item }}</span>
+             </li>
+         </ul>
+         
+
+     </div>
 
 
       <script>
@@ -27,10 +28,7 @@
 
                el: "#box",
                data: {
-                   message: "BZZB",
-                   text: "Sorry",
-                   key: "" + new Date().toLocaleString(),
-                   pdd: {pdd:"ggggg"}
+                   lists: ["hhh","lalala","dididid"]
                }
           })
 
